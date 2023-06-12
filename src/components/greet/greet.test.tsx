@@ -6,3 +6,10 @@ test('Greet renders correctly',()=>{
     expect(textElement).toBeInTheDocument()
 
 })
+
+
+test('Greet rencers name',()=>{
+    render(<Greet name={'Guru'} />)
+    let textElement = screen.getByText('Hello Guru')
+    expect(textElement).toBeInTheDocument()
+})
